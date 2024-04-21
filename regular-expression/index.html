@@ -64,7 +64,7 @@
 					placeholder="Masukkan input untuk regex Satu" />
 				<p>
 					<small
-						><span id="validation-text-Sat1">Validation message.</span></small
+						><span id="validation-text-Hav1">Validation message.</span></small
 					>
 				</p>
 			</div>
@@ -81,7 +81,7 @@
 					placeholder="Masukkan input untuk regex dua" />
 				<p>
 					<small
-						><span id="validation-text-Sat2">Validation message.</span></small
+						><span id="validation-text-Hav2">Validation message.</span></small
 					>
 				</p>
 			</div>
@@ -100,7 +100,7 @@
 					placeholder="Masukkan input untuk regex tiga" />
 				<p>
 					<small
-						><span id="validation-text-Sat3">Validation message.</span></small
+						><span id="validation-text-Hav3">Validation message.</span></small
 					>
 				</p>
 			</div>
@@ -110,8 +110,7 @@
 					<h2>Login</h2>
 				</div>
 				<label for="regexInputHav4"
-					>Regex Empat: Hanya menerima 4 angka
-					karakter</label
+					>Regex Empat: Hanya menerima 4 angka karakter</label
 				><br />
 				<input
 					id="regexInputHav4"
@@ -119,7 +118,7 @@
 					placeholder="Masukkan input untuk regex empat" />
 				<p>
 					<small
-						><span id="validation-text-Sat4">Validation message.</span></small
+						><span id="validation-text-Hav4">Validation message.</span></small
 					>
 				</p>
 			</div>
@@ -137,45 +136,11 @@
 					placeholder="Masukkan input untuk regex lima" />
 				<p>
 					<small
-						><span id="validation-text-Sat5">Validation message.</span></small
+						><span id="validation-text-Hav5">Validation message.</span></small
 					>
 				</p>
 			</div>
 		</section>
-
-		<script>
-			function validateRegex(inputId, regexPattern, validationTextId) {
-				const input = document.getElementById(inputId);
-				const validationText = document.getElementById(validationTextId);
-				input.addEventListener("input", function () {
-					const inputValue = input.value;
-					if (regexPattern.test(inputValue)) {
-						validationText.textContent = "Input is valid.";
-						validationText.style.color = "green";
-					} else {
-						validationText.textContent = "Input is invalid.";
-						validationText.style.color = "red";
-					}
-				});
-			}
-
-			validateRegex(
-				"regexInputHav1",
-				/^[a-zA-Z0-9]{8,}$/,
-				"validation-text-Sat1"
-			);
-			validateRegex(
-				"regexInputHav2",
-				/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-				"validation-text-Sat2"
-			);
-			validateRegex(
-				"regexInputHav3",
-				/^[a-z0-9]{6,12}$/,
-				"validation-text-Sat3"
-			);
-			validateRegex("regexInputHav4", /^\d{4}$/, "validation-text-Sat4");
-			validateRegex("regexInputHav5", /^[A-Z]{5}$/, "validation-text-Sat5");
-		</script>
 	</body>
+	<script src="script.js"></script>
 </html>
